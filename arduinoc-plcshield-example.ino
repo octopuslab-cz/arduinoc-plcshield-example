@@ -248,7 +248,7 @@ void do_write(int pin, bool state) {
 
     case 4:
       if (state)
-        newstate != 0x01 << DO4;
+        newstate |= 0x01 << DO4;
       else
         newstate &= ~(0x01 << DO4);
       break;
